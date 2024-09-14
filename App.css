@@ -1,0 +1,257 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("https://images.ctfassets.net/swt2dsco9mfe/2zTQfxWw5vduhqHMGVMJKT/9c64c2a3249356276293a36da4dbf5f0/2560x1600-terrain-wa.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-position: center;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.82), rgba(0,0,0,0.1), rgba(0,0,0,0), rgba(0,0,0,0),  rgba(0,0,0,0));
+
+}
+
+.screen {
+  font-family:'Times New Roman', Times, serif;
+  color: rgba(210, 191, 177);
+  background:linear-gradient(180deg, rgb(20, 15, 14), rgba(20, 15, 14, 0.5));
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  max-width: 460px;
+  height: 600px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: rgb(175, 134, 102);
+  
+}
+
+.sheet{
+  font-family:'Times New Roman', Times, serif;
+  color: rgba(210, 191, 177);
+  background:linear-gradient(180deg, rgb(20, 15, 14), rgba(20, 15, 14, 0.75), rgba(20, 15, 14, 0.6));
+  margin-top:10px;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  width: 325px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: rgb(175, 134, 102);
+}
+
+.char-info{
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.char-info img{
+  max-width: 150px;
+  max-height: 150px; 
+
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.side-bar{
+  margin-top: 11px;
+}
+
+/*BUTTONS*/
+
+.square-button{
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
+  
+  cursor: pointer;
+  color: rgb(149, 140, 136);
+  background-color:rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: none;
+  border-right: none;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.square-button img{
+  display: flex;
+  align-items: flex-start;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.square-button p{
+  position: absolute;
+}
+
+.square-button:hover{
+  color: #d3d1cf;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: rgba(210, 191, 177);
+}
+
+.menu-button{
+  padding: 10px;
+  cursor: pointer;
+
+  color: #af8666;
+  background-color:rgba(0, 0, 0, 0);
+  width: 95px;
+  height: 95px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px;
+  border: 3px solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.menu-button img{
+  width: 100%;
+  height: 100%;
+  top: -8px; /* Ajuste este valor conforme necessário */
+  left: 0%;
+
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
+
+ }
+
+.menu-button a{
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ left: 0;
+ text-align:center;
+}
+
+.menu-button:hover{
+ color: rgba(210, 191, 177);
+ border: 3px solid;
+ border-color: rgba(210, 191, 177);
+}
+
+.menu-button:hover img{
+ filter: brightness(1.38) saturate(0.332) hue-rotate(356deg);
+}
+
+/*inputs*/
+
+.mini-input{
+  width: 14px;
+  height: 16px;  
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  background-color: rgba(255, 0, 170, 0);
+  font-size: 1rem;
+  color: rgba(210, 191, 177);
+}
+
+
+
+.ability-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ability-container p{
+  text-align: center;
+}
+
+
+
+/*Race*/
+.race-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.race-content h3{
+  text-align: center;
+  width: 100%;
+  margin-bottom: -9px;
+}
+
+.race-content p{
+  text-align:center;
+  bottom: 0;
+}
+
+/*ability field*/
+
+.abilities{
+  display: grid;
+  grid-template-rows: 16% 84%;
+  height:140px;
+  padding: 0px 18px 0px 15px;
+
+
+}
+
+.ability-field{
+  position: relative;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+.ability-field img{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  fill:rgb(175, 134, 102);
+  object-fit: cover;
+}
+
+.ability-field input{
+  position: absolute;
+  top: 3px;
+  left: -3px;
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+  text-align: center;
+  
+  object-fit: cover;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0px 0px 10px 10px;
+  border: none;
+  background-color: rgba(255, 0, 170, 0);
+  font-size: 1.25rem;
+  color: rgba(210, 191, 177);
+}
+
+.ability-field p{
+  position: relative;
+  font-size: 14px;
+  top: 33px;
+};
+
+.proficiencies-txt{
+  color: #958c88;
+  margin-bottom:'-14px';
+ text-align: justify;
+}
