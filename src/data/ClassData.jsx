@@ -21,7 +21,7 @@ export const CLASSES = {
         tool:[], 
         weapons:['Simple Weapons', 'Martial Weapons'],
         armour: ['Light Armor', 'Medium Armor', 'Shields'], 
-        saving:['Strength', 'Constitution'], 
+        savings:['Strength', 'Constitution'], 
         skills:[2, ['Animal Handling', 'Athletics', 'Intimidation', 'Nature', 'Perception', 'Survival']],
         art: [barbarianArt],
         features:{
@@ -66,7 +66,7 @@ export const CLASSES = {
         hp:8, tool:["Three musical instruments of your choice"], 
         weapons:['Simple Weapons', 'Handcrossbows', 'Longswords', 'Rapiers', 'Shortswords'], 
         armour: ['Light Armor'], 
-        saving:['Dexterity', 'Charisma'], 
+        savings:['Dexterity', 'Charisma'], 
         skills:[3, ['Athletics', 'Acrobatics', 'Sleight of Hand', 'Stealth', 'Arcana', 'History','Investigation', 'Nature', 'Religion']],
         art:"",
         features:{ 
@@ -111,7 +111,7 @@ export const CLASSES = {
         tool:[],
         weapons:["Simple Weapons"], 
         armour: ["Light Armor", "Medium Armor", "Shields"], 
-        saving:["Wisdom ", "Charisma"], 
+        savings:["Wisdom ", "Charisma"], 
         skills:[2, ["History", "Insight", "Medicine", "Persuasion", "Religion"]], 
         features:{
             1:[],
@@ -143,7 +143,7 @@ export const CLASSES = {
         tool:["Herbalism kit"], 
         weapons:["Clubs", "Daggers", "Darts", "Javelins", "Maces", "Quarterstaffs", "Cimitars", "Sickles", "Slings", "Spears"], 
         armour: ["Light Armor", "Medium Armor", "Shields", "(druids will not wear armor or use shields made of metal)"], 
-        saving:["Intelligence "," Wisdom"], 
+        savings:["Intelligence "," Wisdom"], 
         skills:[2, ["Arcana", "Animal", "Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"]], 
         features:{
             1:[],
@@ -174,7 +174,7 @@ export const CLASSES = {
         hp:10, tool:[], 
         weapons:["Simple Weapons", "Martial Weapons"], 
         armour: ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
-        saving:["Strength "," Constitution"], 
+        savings:["Strength "," Constitution"], 
         skills:[2, ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]], 
         features:{
             1:[],
@@ -206,7 +206,7 @@ export const CLASSES = {
         tool:["Choose one type of artisan’s tools or one musical instrument"], 
         weapons:["Simple Wapons", "Shortswords"], 
         armour: [], 
-        saving:["Strength", "Dexterity"], 
+        savings:["Strength", "Dexterity"], 
         skills:[2, ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]], 
         features:{
             1:[],
@@ -238,7 +238,7 @@ export const CLASSES = {
         tool:[], 
         weapons:["Simple Weapons", "Martial Weapons"], 
         armour: ["Light Armor", "Medium Armor", "Heavy Armor", "Shields"],
-        saving:["Wisdom", "Charisma"], 
+        savings:["Wisdom", "Charisma"], 
         skills:[2, ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]], 
         features:{
             1:[],
@@ -269,7 +269,7 @@ export const CLASSES = {
         hp:10, tool:[], 
         weapons:["Simple Weapons", "Martial Weapons"], 
         armour: ["Light Armor", "Medium Armor", "Shields"], 
-        saving:["Strength", "Dexterity"], 
+        savings:["Strength", "Dexterity"], 
         skills:[3, ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]], 
         features:{
             1:[],
@@ -301,7 +301,7 @@ export const CLASSES = {
         tool:["Thieves’ tools"], 
         weapons:["Simple Weapons","Handcrossbows", "Longswords", "Rapiers", "Shortswords"], 
         armour: ["Light Armor"], 
-        saving:["Dexterity", "Intelligence"], 
+        savings:["Dexterity", "Intelligence"], 
         skills:[4, ["Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"]], 
         features:{
             1:[],
@@ -331,9 +331,9 @@ export const CLASSES = {
         description:'A spellcaster who draws on inherent magic from a gift or bloodline', 
         hp:6, 
         tool:[], 
-        weapons:["Daggers", "Darts", "Slings", "Quarterstaffs", "Light", "Crossbows"], 
+        weapons:["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"], 
         armour: '', 
-        saving:["Constitution", "Charisma"], 
+        savings:["Constitution", "Charisma"], 
         skills:[2, ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"]], 
         features:{
             1:[],
@@ -365,7 +365,7 @@ export const CLASSES = {
         tool:[], 
         weapons:["Simple Weapons"], 
         armour: ["Light Armor"], 
-        saving:["Wisdom", "Charisma"], 
+        savings:["Wisdom", "Charisma"], 
         skills:[2,["Arcana", "Deception" , "History", "Intim idation", "Investigation", "Nature", "Religion"]], 
         features:{
             1:[],
@@ -395,9 +395,9 @@ export const CLASSES = {
         description:'A scholarly magic-user capable of manipulating the structures of reality', 
         hp:6, 
         tool:[], 
-        weapons:["Daggers", "Darts", "Slings", "Quarterstaffs", "Light", "Crossbows"], 
+        weapons:["Daggers", "Darts", "Slings", "Quarterstaffs", "Light Crossbows"], 
         armour: '', 
-        saving:["Intelligence", "Wisdom"], 
+        savings:["Intelligence", "Wisdom"], 
         skills:[2, ["Arcana", "History", "Insight","Investigation", "Medicine", "Religion"]], 
         features:{
             1:[],

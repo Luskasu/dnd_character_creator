@@ -1,4 +1,3 @@
-import React from 'react';
 import { RACES } from '../data/RaceData';
 
 

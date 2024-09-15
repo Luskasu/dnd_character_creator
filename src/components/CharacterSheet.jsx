@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import AbilityField from './AbilityField';
 import { useChar } from '../contexts/CharContext';
 import { CLASSES } from '../data/ClassData';
-
+import {RACES} from '../data/RaceData';
 
 const CharacterSheet = () => {
   const { selectedRace, selectedClass, level, setLevel} = useChar();
@@ -14,14 +14,13 @@ const CharacterSheet = () => {
   const [sabedoria, setSabedoria] = useState(8);
   const [carisma, setCarisma] = useState(8);
 
-  const [classWeapons, setClassWeapons] = useState([])
-  const [classArmours, setClassArmours] = useState([])
-
-  const [raceWeapons, setRaceWeapons] = useState([])
-  const [raceArmours, setRaceArmours] = useState([])
-
 
   const [weapons, setWeapons] = useState([]);
+  const [customWeapons, setCustomWeapons] = useState([]);
+  const [customSavings, setCustomSavings] = useState([]);
+  const [customSkills, setCustomSkills] = useState([])
+
+
   const [armours, setArmours] = useState([]);
   const [savings, setSavings] = useState([]);
 
@@ -34,31 +33,30 @@ const CharacterSheet = () => {
     return "None";
   }
 
-  const updateWeapons = () => {
-    const updated = [...new Set([...classWeapons, ...raceWeapons])]
-    setWeapons(updated);
-  };
-
-  const updateArmours = () =>{
-    const updated = [...new Set([...classArmours, ...raceArmours])]
-    setArmours(updated);
-  };
+  useEffect(() => {
+    const finalWeapons = [
+      ...new Set([
+        ...CLASSES?.[selectedClass]?.weapons ?? [],
+        ...RACES?.[selectedRace]?.weapons ?? [],
+        ...customWeapons
+      ])];
+    const finalArmours = [
+      ...new Set([
+        ...CLASSES?.[selectedClass]?.armour ?? [],
+        ...RACES?.[selectedRace]?.armours ?? []
+      ])];
+    setWeapons(finalWeapons);
+    setArmours(finalArmours);
+  }, [selectedClass, selectedRace, customWeapons]);
 
   useEffect(() => {
-    if (selectedClass) {
-      updateWeapons()
-      updateArmours()
-    }
-  }, [classWeapons], [classArmours]);
-
-
-  useEffect(() => {
-    if (selectedClass) {
-      setClassWeapons(CLASSES[selectedClass].weapons);
-      setClassArmours(CLASSES[selectedClass].armour);
-      setSavings(CLASSES[selectedClass].saving)
-    }
-  }, [selectedClass]);
+    const finalSavings = [...new Set([
+      ...CLASSES?.[selectedClass]?.savings ?? [],
+      ...customSavings ?? []
+    ])];
+    setSavings(finalSavings);
+  }, [selectedClass, customSavings]);
+  
 
   const Proficiencies = () =>{
     return(
@@ -70,7 +68,7 @@ const CharacterSheet = () => {
         <p style={{color:'#958c88', marginBottom:'-14px'}}><a style={{color:'rgba(210, 191, 177)'}}>Saving Throws </a>{ViewProficiencies(savings)}</p>
 
         <p style={{color:'#958c88', marginBottom:'-14px'}}><a style={{color:'rgba(210, 191, 177)'}}>Skills -</a> Athletics, Religion, Insight, Intimidation, Persuasion</p>
-</div>
+  </div>
     );
   }
 

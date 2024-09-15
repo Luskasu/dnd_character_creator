@@ -1,4 +1,3 @@
-import React from 'react';
 import MainScreen from './components/MainScreen';
 import CharacterSheet from './components/CharacterSheet';
 import { CharProvider } from './contexts/CharContext';

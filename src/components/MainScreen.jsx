@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { RaceCard } from './RaceCards';
 import { RACES, raceImages } from '../data/RaceData';
 import { CLASSES, classIcons } from '../data/ClassData';
@@ -43,6 +43,7 @@ const MainScreen = () => {
             <div className={"grid"}>
             {Object.entries(RACES).map(([race, info]) => (
                 <MenuButton
+                  key = {info.name}
                   image={raceImages[info.name.toLowerCase()]}
                   name={info.name}
                   menuType={'Race'}
@@ -63,6 +64,7 @@ const MainScreen = () => {
             <div className={"grid"}>
               {Object.entries(CLASSES).map(([classe, info]) => (
                 <MenuButton
+                  key = {info.name}
                   image={classIcons[info.name.toLowerCase()]}
                   name={info.name}
                   menuType={'Class'}
@@ -79,6 +81,7 @@ const MainScreen = () => {
             <div className={"grid"}>
               {BACKGROUNDS.map(background => (
                 <MenuButton
+                  key = {background.name}
                   image={backgroundsImages[background.name.toLowerCase()]}
                   name={background.name}
                   menuType={'Background'}

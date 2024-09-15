@@ -1,7 +1,3 @@
-import React from 'react';
-
-
-
 export const MenuButton = ({ image, name, menuType, onClick}) => (
     <button className={"menu-button"} onClick={onClick}>
       <img src={image} alt={`${name} race`} />

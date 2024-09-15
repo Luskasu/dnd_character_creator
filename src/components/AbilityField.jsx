@@ -1,4 +1,3 @@
-import React from 'react';
 import attribute from '../assets/attribute.svg'
 
 const AbilityField = ({abilityName, value, onChange}) =>(
